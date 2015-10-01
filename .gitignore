@@ -1,0 +1,7 @@
+.installed.cfg
+bin/
+include/
+lib/
+parts/
+uuid.txt
+var/
