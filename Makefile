@@ -3,7 +3,8 @@ PROJECT=venus
 default: usage
 
 usage:
-	@echo "Usage:"
+	@echo "Usage: make <target>"
+	@echo "-------------"
 	@echo "docker-build:	create a docker container"
 	@echo "docker-run:	start the docker container"
 	@echo "buildout:	build ploneintranet"
@@ -11,6 +12,7 @@ usage:
 	@echo "start:		start all services"
 	@echo "stop:		stop all services"
 	@echo "clean:		remove all data to prepare for fresh re-build (destructive!)"
+	@echo "-------------"
 
 Dockerfile:
 	wget https://raw.githubusercontent.com/ploneintranet/ploneintranet/master/Dockerfile
