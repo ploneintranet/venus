@@ -1,7 +1,11 @@
+.cache/
+.dbus/
 .installed.cfg
+.mozilla/
 bin/
 include/
 lib/
+libreoffice/
 parts/
 uuid.txt
 var/
