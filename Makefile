@@ -67,5 +67,5 @@ stop:
 	bin/supervisorctl shutdown
 
 clean:
-	git clean -fd
+	git clean -fdX
 
