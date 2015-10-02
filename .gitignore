@@ -2,6 +2,7 @@
 .dbus/
 .installed.cfg
 .mozilla/
+.ssh/
 bin/
 include/
 lib/
