@@ -71,3 +71,6 @@ stop:
 clean:
 	git clean -fdX
 
+# no-op target needed by generated script
+fetchrelease:
+	@echo
