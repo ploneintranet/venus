@@ -26,18 +26,19 @@ docker-build: Dockerfile
 docker-run:  ## Start docker container
 	docker run -i -t \
                 --net=host \
-                -v $(SSH_AUTH_SOCK):/tmp/auth.sock \
-                -v $(HOME)/.buildout:/.buildout \
                 -v /var/tmp:/var/tmp \
-                -v $(HOME)/.bashrc:/.bashrc \
-                -v $(HOME)/.pypirc:/.pypirc \
-                -v $(HOME)/.gitconfig:/.gitconfig \
-                -v $(HOME)/.gitignore:/.gitignore \
+                -v $(SSH_AUTH_SOCK):/tmp/auth.sock \
+                -v $(HOME)/.bashrc:/app/.bashrc \
+                -v $(HOME)/.buildout:/app/.buildout \
+                -v $(HOME)/.pypirc:/app/.pypirc \
+                -v $(HOME)/.gitconfig:/app/.gitconfig \
+                -v $(HOME)/.gitignore_global:/app/.gitignore_global \
                 -e SSH_AUTH_SOCK=/tmp/auth.sock \
 		-e PYTHON_EGG_CACHE=/var/tmp/python-eggs \
 		-e LC_ALL=en_US.UTF-8 \
 		-e LANG=en_US.UTF-8 \
                 -v $(PWD):/app -w /app -u app $(PROJECT)
+
 
 buildout: bin/buildout buildout.cfg
 	bin/buildout

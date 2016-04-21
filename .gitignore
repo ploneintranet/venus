@@ -1,7 +1,11 @@
+.bash_history
+.bashrc
 .cache/
 .dbus/
+.gitconfig
 .installed.cfg
 .mozilla/
+.pypirc
 .ssh/
 bin/
 include/
