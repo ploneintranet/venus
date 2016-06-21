@@ -1,4 +1,4 @@
-from quaive/ploneintranet-base:latest
+from quaive/ploneintranet-base:venus
 maintainer guido.stevens@cosent.net
 run locale-gen en_US.UTF-8 nl_NL@euro
 run useradd -m -d /app app && echo "app:app" | chpasswd && adduser app sudo
